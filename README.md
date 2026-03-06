@@ -71,23 +71,31 @@ graph TD
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
+Ensure you have the following installed on your local machine:
 *   **PHP 8.2+** & **Composer**
 *   **Node.js 18+** & **npm**
 *   **MySQL Database**
 
-### 2. Installation & Setup
+### 2. Clone the Repository
+Clone the project to your local machine and navigate to the project folder:
 ```bash
-# Clone the repository
 git clone https://github.com/vipultikhe234/Employee-Attendance-Management-System.git
 cd Employee-Attendance-Management-System
+```
 
-# Install Dependencies
+### 3. Install Dependencies
+Install all required PHP and JavaScript packages:
+```bash
 composer install
 npm install
 ```
 
-### 3. Environment Configuration
-Copy `.env.example` to `.env` and configure your database:
+### 4. Environment Configuration
+Create a `.env` file from the example and configure your database:
+```bash
+cp .env.example .env
+```
+Update your database credentials in `.env`:
 ```env
 DB_CONNECTION=mysql
 DB_DATABASE=employee_attendance
@@ -95,16 +103,18 @@ DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
 
-### 4. Database Setup & Launch
+### 5. Database Setup & Seeding
+Run migrations and populate the database with demo accounts:
 ```bash
-# Run migrations and seed sample data
 php artisan migrate:fresh --seed
+```
 
-# Build assets and serve
+### 6. Build & Serve
+Build the frontend assets and launch the local development server:
+```bash
 npm run build
 php artisan serve
 ```
-*Default Admin: `admin@admin.com` | `password`*
 
 ---
 
